@@ -1,0 +1,114 @@
+body {
+    font-family: 'Clearface Serial Regular', serif;
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Avenir LT 85 Heavy', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.filter-row {
+    align-self: flex-end;
+    margin-bottom: 20px;
+}
+
+.filter-row select {
+    font-size: 1em;
+    padding: 5px;
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.revenues, .booking-source, .average-ratios {
+    flex: 1;
+    margin: 20px;
+}
+
+.revenues h2, .booking-source h2, .average-ratios h2, .daily-revenue-figures h2, .daily-metrics h2, .average-daily-occupancy h2 {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.revenues p, .average-ratios p {
+    font-size: 1.2em;
+}
+
+.booking-source canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+.daily-revenue-figures {
+    width: 80%;
+    margin: 20px 0;
+}
+
+.daily-metrics {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.daily-metrics > div {
+    width: 30%;
+}
+
+.average-daily-occupancy table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.average-daily-occupancy th, .average-daily-occupancy td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.average-daily-occupancy th {
+    background-color: #f5f5f5;
+}
+
+/* Responsive Styles */
+@media (max-width: 720px) {
+    .top-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .revenues, .booking-source, .average-ratios, .daily-metrics > div {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (min-width: 721px) and (max-width: 1280px), 
+       (min-width: 1281px) and (max-width: 1440px), 
+       (min-width: 1441px) and (max-width: 1920px), 
+       (min-width: 1921px) and (max-width: 2560px) {
+    .top-row {
+        flex-direction: row;
+    }
+
+    .revenues, .booking-source, .average-ratios, .daily-metrics > div {
+        width: 30%;
+    }
+}

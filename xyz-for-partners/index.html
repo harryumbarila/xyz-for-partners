@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ-for-Partners</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1>XYZ-for-Partners</h1>
+    </header>
+    <div class="container">
+        <div class="filter-row">
+            <label for="month-select">Month: </label>
+            <select id="month-select">
+                <option value="june">June</option>
+                <option value="july" selected>July</option>
+            </select>
+        </div>
+        <div class="top-row">
+            <div class="revenues">
+                <h2>Revenues</h2>
+                <p>Rooms: <span id="rooms-revenue">$0</span></p>
+                <p>Other: <span id="other-revenue">$0</span></p>
+                <p>Total: <span id="total-revenue">$0</span></p>
+            </div>
+            <div class="booking-source">
+                <h2>Booking Source</h2>
+                <canvas id="bookingSourceChart"></canvas>
+            </div>
+            <div class="average-ratios">
+                <h2>Average Ratios</h2>
+                <p>ADR: <span id="adr">$0</span></p>
+                <p>RevPAR: <span id="revpar">$0</span></p>
+                <p>Occupancy Rate: <span id="occupancy-rate">0%</span></p>
+            </div>
+        </div>
+        <div class="daily-revenue-figures">
+            <h2>Daily Revenue Figures</h2>
+            <canvas id="dailyRevenueChart"></canvas>
+        </div>
+        <div class="daily-metrics">
+            <div class="adr-chart">
+                <h2>ADR</h2>
+                <canvas id="adrChart"></canvas>
+            </div>
+            <div class="occupancy-rate-chart">
+                <h2>Daily Occupancy Rate</h2>
+                <canvas id="occupancyRateChart"></canvas>
+            </div>
+            <div class="revpar-chart">
+                <h2>RevPAR</h2>
+                <canvas id="revparChart"></canvas>
+            </div>
+        </div>
+        <div class="average-daily-occupancy">
+            <h2>Average Daily Occupancy</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Weekday</th>
+                        <th>Occupancy Rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td id="monday-rate">0%</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td id="tuesday-rate">0%</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td id="wednesday-rate">0%</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td id="thursday-rate">0%</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td id="friday-rate">0%</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td id="saturday-rate">0%</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td id="sunday-rate">0%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
